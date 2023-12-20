@@ -4,7 +4,7 @@
   "description": "this is a rest api for fatching subscribers by name and ids",
   "main": "index.js",
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   },
   "scripts": {
     "test": "jest",
