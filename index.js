@@ -9,7 +9,7 @@ dotenv.config();
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // Connect to DATABASE
 const DATABASE_URL = process.env.DATABASE_URI || "mongodb://127.0.0.1:27017/subscribers";
