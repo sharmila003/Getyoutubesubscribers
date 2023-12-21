@@ -38,7 +38,7 @@ app.get("/subscribers/names",async(req,res)=>{
 app.get("/subscribers/:id",async(req,res)=>{
   try{
       console.log(req.params.id)
-    let subscriber = await Subscriber.findById(req.params.id)
+    let subscriber = await Subscriber.findById({_id:req.params.id})
     if(subscriber) {
       res.status(200).json(subscriber)
       }else {
