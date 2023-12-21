@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to DATABASE
-const DATABASE_URL = process.env.DATABASE_URI || "mongodb://127.0.0.1:27017/subscribers";
+const DATABASE_URL ="mongodb+srv://sharmila055:FZO90QTf2gXoMZTu@subscribers.r9cwb6z.mongodb.net/subscribers?retryWrites=true&w=majority";
 mongoose.connect(DATABASE_URL,{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))
