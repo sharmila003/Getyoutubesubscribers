@@ -37,6 +37,7 @@ app.get("/subscribers/names",async(req,res)=>{
 //api to get subscribers by id || METHOD GET
 app.get("/subscribers/:id",async(req,res)=>{
   try{
+      console.log(req.params.id)
     let subscriber = await Subscriber.findById(req.params.id)
     if(subscriber) {
       res.status(200).json(subscriber)
